@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AR.js 3D Model Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@2.1.8"></script>
+</head>
+<body>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <a-entity position="0 0 0">
+            <a-camera-static></a-camera-static>
+        </a-entity>
+        <a-marker preset="hiro">
+            <a-entity gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf" scale="0.2 0.2 0.2"></a-entity>
+        </a-marker>
+    </a-scene>
+</body>
+</html>
